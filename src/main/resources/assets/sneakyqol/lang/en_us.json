@@ -1,0 +1,22 @@
+{
+  "category.sneakyqol.main": "Sneaky Quality of Life",
+  "key.sneakyqol.shownames": "Show Player Names",
+  "key.sneakyqol.leanleft": "Lean Left",
+  "key.sneakyqol.leanright": "Lean Right",
+  "key.sneakyqol.voicetotext": "Voice To Text",
+  "key.sneakyqol.radar": "Toggle Radar",
+  "key.sneakyqol.sit": "Trigger /Sit",
+  "key.sneakyqol.lay": "Trigger /Lay",
+  "key.sneakyqol.bellyflop": "Trigger /Bellyflop",
+  "key.sneakyqol.fury": "Trigger /Fury",
+  "key.sneakyqol.campfire": "Trigger /Campfire",
+  "key.sneakyqol.mcl": "Trigger /Mcl",
+  "key.sneakyqol.walk": "Trigger /Walk",
+  "key.sneakyqol.me.gasp": "Trigger Gasp :O",
+  "key.sneakyqol.me.sneaking": "Trigger Sneaking",
+  "key.sneakyqol.me.smells_flowers": "Trigger Smells Flowers",
+  "key.sneakyqol.me.waves": "Trigger Waves",
+  "key.sneakyqol.me.salutes": "Trigger Salutes",
+  "key.sneakyqol.toggle_better_sneak": "Toggle Better Sneak",
+  "key.sneakyqol.yoink_skin": "Yoink Target Players Skin"
+}

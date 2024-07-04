@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "ca.bungo.sneakyqol.mixin.client",
+	"compatibilityLevel": "JAVA_17",
+	"client": [
+		"GameRenderMixin",
+		"PlayerEntityRendererMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
