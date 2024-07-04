@@ -39,7 +39,7 @@ public class TestKeybind {
                 if(client.player == null) return;
 
                 for(PlayerEntity player : PlayerUtility.getAllPlayers(client)){
-                    SneakyQOL.LOGGER.info("Found Player: {}", player.getEntityName());
+                    SneakyQOL.LOGGER.info("Found Player: {}", player.getName().getString());
                 }
             }
         });

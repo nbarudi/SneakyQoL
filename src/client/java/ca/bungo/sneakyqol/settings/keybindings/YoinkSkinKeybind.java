@@ -30,7 +30,7 @@ public class YoinkSkinKeybind {
                 if (entity != null) {
                     String SkinURL = PlayerUtility.fetchPlayerSkin(entity);
                     if(client.player == null) return;
-                    client.player.sendMessage(Text.of("§e" + entity.getEntityName() + "'s Skin URL:\n").copy().append(
+                    client.player.sendMessage(Text.of("§e" + entity.getName().getString() + "'s Skin URL:\n").copy().append(
                             Text.literal("§b" + SkinURL)
                                     .setStyle(Style.EMPTY.withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, SkinURL)))
                     ));

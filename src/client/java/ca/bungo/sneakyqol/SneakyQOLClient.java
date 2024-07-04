@@ -3,11 +3,8 @@ package ca.bungo.sneakyqol;
 import ca.bungo.sneakyqol.settings.KeybindHandling;
 import ca.bungo.sneakyqol.utility.ResourceExtractor;
 import ca.bungo.sneakyqol.vtt.EventHandlerVTT;
-import ca.bungo.sneakyqol.vtt.VoiceToText;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.client.MinecraftClient;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,6 +25,9 @@ public class SneakyQOLClient implements ClientModInitializer {
 
 		//Starting Keybind Handling:
 		KeybindHandling.initializeKeybindHandler();
+
+		//Features
+		//new LeanFeature();
 
 		try {
 			File configDir = new File(FabricLoader.getInstance().getConfigDir().toString(), "sneakyqol");

@@ -76,7 +76,7 @@ public class RadarKeybind {
             for(PlayerEntity player : playerEntityList){
                 if(player.getUuid().toString().equals(client.player.getUuid().toString())) continue;
                 int playerDistance = (int)Math.floor(player.getPos().distanceTo(localPlayer.getPos()));
-                Text text = Text.of("§e" + player.getEntityName() + "§r(§b" + playerDistance +"§r)");
+                Text text = Text.of("§e" + player.getName().getString() + "§r(§b" + playerDistance +"§r)");
                 playerInfo.add(text);
             }
 

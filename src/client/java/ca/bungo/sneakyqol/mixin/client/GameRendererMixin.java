@@ -1,22 +1,28 @@
 package ca.bungo.sneakyqol.mixin.client;
 
-
 import ca.bungo.sneakyqol.settings.GlobalValues;
+import net.minecraft.client.render.Camera;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.entity.Entity;
+import org.joml.Matrix4f;
 import org.joml.Quaternionf;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 @Mixin(GameRenderer.class)
-public class GameRenderMixin {
+public class GameRendererMixin {
 
     private static final float LEAN_SPEED = 0.1f;
 
-    @Inject(method = "renderWorld(FJLnet/minecraft/client/util/math/MatrixStack;)V", at = @At("HEAD"))
-    private void onRenderWorld(float tickDelta, long limitTime, MatrixStack matrix, CallbackInfo ci) {
+    @Inject(method = "renderWorld", at = @At(value = "INVOKE",
+            target = "Lnet/minecraft/client/render/GameRenderer;tiltViewWhenHurt(Lnet/minecraft/client/util/math/MatrixStack;F)V",
+            shift = At.Shift.AFTER),
+            locals = LocalCapture.CAPTURE_FAILHARD)
+    private void onRenderWorld(float tickDelta, long limitTime, CallbackInfo ci, boolean bl, Camera camera, Entity entity, double d, Matrix4f matrix4f, MatrixStack matrixStack) {
         float targetLeanAngle = 0.0f;
         float targetLeanOffset = 0.0f;
 
@@ -37,8 +43,8 @@ public class GameRenderMixin {
 
         if (GlobalValues.currentLeanAngle != 0.0f) {
             Quaternionf quaternion = new Quaternionf().rotateZ((float) Math.toRadians(GlobalValues.currentLeanAngle));
-            matrix.translate(GlobalValues.currentLeanOffset, 0, 0);
-            matrix.multiply(quaternion);
+            matrixStack.translate(GlobalValues.currentLeanOffset, 0, 0);
+            matrixStack.multiply(quaternion);
         }
     }
 
