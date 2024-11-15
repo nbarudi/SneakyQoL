@@ -80,7 +80,7 @@ public class RadarKeybind {
                 playerInfo.add(text);
             }
 
-            MultilineText multilineText = MultilineText.createFromTexts(textRenderer, playerInfo);
+            MultilineText multilineText = MultilineText.create(textRenderer, playerInfo.toArray(new Text[0]));
             multilineText.draw(context, x+X_OFFSET, y+2, Y_OFFSET, 0xff0000);
 
         });

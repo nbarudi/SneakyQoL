@@ -13,6 +13,7 @@ public class KeybindHandling {
         new VoiceToTextKeybind();
         new SimpleCommandKeybinds();
         new BetterSneakKeybind();
+        //new QuickSelectMenuKeybind();
 
 
         //Things the Admins Prob Wont Like
