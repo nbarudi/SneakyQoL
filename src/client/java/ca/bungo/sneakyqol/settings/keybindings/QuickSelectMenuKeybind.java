@@ -1,11 +1,9 @@
 package ca.bungo.sneakyqol.settings.keybindings;
 
-import ca.bungo.sneakyqol.features.QuickSelectMenu;
 import ca.bungo.sneakyqol.settings.KeybindHandling;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import org.lwjgl.glfw.GLFW;
@@ -37,8 +35,8 @@ public class QuickSelectMenuKeybind {
 //                }
 //            }
 
-            if(keyBinding.wasPressed())
-                client.setScreen(new QuickSelectMenu());
+//            if(keyBinding.wasPressed())
+//                client.setScreen(new QuickSelectMenu());
 
         });
 
